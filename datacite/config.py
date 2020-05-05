@@ -20,7 +20,6 @@ class Config(BaseSettings):
     SERVER_PORT: int
 
     NO_AUTH: Optional[bool]
-    OAUTH2_AUDIENCE: Optional[str]
     OAUTH2_SCOPE: Optional[str]
     ALLOWED_ROLES: Optional[List[str]]
     ACCOUNTS_API_URL: Optional[AnyHttpUrl]
@@ -34,7 +33,7 @@ class Config(BaseSettings):
     def validate_no_auth(cls, value):
         return value
 
-    @validator('ACCOUNTS_API_URL', 'OAUTH2_AUDIENCE', 'OAUTH2_SCOPE', 'ALLOWED_ROLES', always=True)
+    @validator('ACCOUNTS_API_URL', 'OAUTH2_SCOPE', 'ALLOWED_ROLES', always=True)
     def require_auth_settings(cls, value, values):
         if not values.get('NO_AUTH', False) and not value:
             raise ValueError("Value is required if NO_AUTH is False")

@@ -24,7 +24,6 @@ class Authorizer(HTTPBearer):
             r = requests.post(config.ACCOUNTS_API_URL + '/authorization/',
                               json={
                                   'token': access_token,
-                                  'audience': config.OAUTH2_AUDIENCE,
                                   'scope': config.OAUTH2_SCOPE,
                                   'super_roles': config.ALLOWED_ROLES,
                               },

@@ -24,7 +24,6 @@ for an example configuration.
 
 #### Security config
 - **`ACCOUNTS_API_URL`**: URL of the ODP Accounts API, for access token validation
-- **`OAUTH2_AUDIENCE`**: `DataCite-API` (expected value for 'aud' in received access tokens)
 - **`OAUTH2_SCOPE`**: OAuth2 scope applicable to this service
 - **`ALLOWED_ROLES`**: JSON-encoded list of roles that may access this service
 - **`NO_AUTH`**: optional, default `False`; set to `True` to disable access token validation
