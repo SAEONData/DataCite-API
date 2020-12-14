@@ -1,5 +1,7 @@
 # DataCite API
 
+***Note: DataCite integration is now provided by the Open-Data-Platform project***
+
 A facade to the DOI functions of the [DataCite REST API](https://support.datacite.org/docs/api),
 facilitating registration and management of DOI records with DataCite.
 
